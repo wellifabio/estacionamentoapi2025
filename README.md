@@ -19,3 +19,19 @@ DATABASE_URL="mysql://root@localhost:3306/estacionamentoapi?schema=public&timezo
 - 2 Implante o Banco de Dados `npx prisma migrate dev --name init`
 - 3 Instale as dependências: `npm install`
 - 4 Inicie o servidor: `npm run dev`
+
+## Rotas
+
+### Veículos
+- `GET /veiculos` - Listar todos os veículos
+- `GET /veiculos/:placa` - Buscar veículo por placa
+- `POST /veiculos` - Criar novo veículo
+- `PATCH /veiculos/:placa` - Atualizar veículo por placa
+- `DELETE /veiculos/:placa` - Deletar veículo por placa
+
+### Estadias
+- `GET /estadias` - Listar todas as estadias
+- `GET /estadias/:id` - Buscar estadia por ID
+- `POST /estadias` - Criar nova estadia
+- `PATCH /estadias/:id` - Atualizar estadia por ID
+- `DELETE /estadias/:id` - Deletar estadia por ID
