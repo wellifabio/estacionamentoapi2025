@@ -51,7 +51,13 @@ const del = async (req, res) => {
         });
         res.status(204).send();
     } catch (error) {
-        res.status(500).json({ error: 'Erro ao deletar veiculo' });
+        //Se o veiculo não for encontrado retornar erro 404
+        if (error.code === 'P2025') {
+            return res.status(404).json({ erro: 'Veiculo não encontrado', error: error.message });
+        } else {
+            //Para outros erros, retornar erro 400
+            res.status(400).json({ erro: 'Erro ao deletar veiculo', error: error.message });
+        }
     }
 }
 
