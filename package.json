@@ -1,0 +1,21 @@
+{
+  "name": "estacionamentoapi2025",
+  "version": "1.0.0",
+  "description": "Projeto Backend para gerenciamento de estacionamento. Modelo de projeto para aulas de desenvolvimento de APIs com Node.js, Express e Prisma.\r ![UML CD(Diagrama e Classes)](./docs/uml-dc.png)\r ## Tecnologias Utilizadas\r - Node.js\r - Express\r - Prisma\r - MySQL - MariaDB",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "npx nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "wellifabio",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^6.14.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0"
+  }
+}
