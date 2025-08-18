@@ -1,6 +1,6 @@
 # Estacionamento - API
 Projeto Backend para gerenciamento de estacionamento. Modelo de projeto para aulas de desenvolvimento de APIs com Node.js, Express e Prisma.
-![UML CD(Diagrama e Classes)](./docs/)
+![UML CD(Diagrama e Classes)](./docs/uml-dc.png)
 ## Tecnologias Utilizadas
 - Node.js
 - Express
