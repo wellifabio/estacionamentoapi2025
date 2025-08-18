@@ -30,7 +30,7 @@ const validaToken = (req, res) => {
         if (err) {
             return res.status(403).send({ valid: false, payload: null }).end();
         }
-        res.status(200).json({ valid: true, payload: atob(decoded) }).end();
+        res.status(200).json({ valid: true, payload: decoded }).end();
     });
 }
 
