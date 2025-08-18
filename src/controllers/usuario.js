@@ -5,7 +5,6 @@ const prisma = new PrismaClient();
 
 const login = async (req, res) => {
     const { email, senha } = req.body;
-
     try {
         const usuario = await prisma.usuario.findFirst({
             where: {
@@ -16,7 +15,7 @@ const login = async (req, res) => {
         if (!usuario) {
             return res.status(401).json({ message: 'E-mail ou senha incorretos!' });
         } else {
-            const isValidsenha = await Middlewares.validatesenha(senha, usuario.senha);
+            const isValidsenha = await Middlewares.validatePassword(senha, usuario.senha);
             if (!isValidsenha) {
                 return res.status(401).json({ message: 'E-mail ou senha incorretos!' }).end();
             }
@@ -32,8 +31,7 @@ const login = async (req, res) => {
             res.status(200).json({ token: token });
         }
     } catch (err) {
-        console.error('Erro no login:', err);
-        res.status(500).json({ message: 'Erro interno do servidor' });
+        res.status(500).json({ message: 'Erro interno do servidor', error: err.message });
     }
 };
 
