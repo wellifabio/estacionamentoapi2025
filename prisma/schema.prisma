@@ -7,6 +7,16 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Usuario {
+  id       Int       @id @default(autoincrement())
+  nome     String
+  email    String    @unique
+  senha    String
+  avatar   String?
+  veiculos Veiculo[]
+  estadias Estadia[]
+}
+
 model Veiculo {
   placa        String    @id
   tipo         Tipo
@@ -16,7 +26,9 @@ model Veiculo {
   cor          String?
   ano          Int?
   telefone     String
+  usuarioId    Int?
   estadias     Estadia[]
+  usuario      Usuario?  @relation(fields: [usuarioId], references: [id], onDelete: SetNull)
 }
 
 enum Tipo {
@@ -34,5 +46,7 @@ model Estadia {
   saida      DateTime?
   valorHora  Float
   valorTotal Float?
+  usuarioId  Int?
   automovel  Veiculo?  @relation(fields: [placa], references: [placa], onUpdate: Cascade, onDelete: SetNull)
+  usuario    Usuario?  @relation(fields: [usuarioId], references: [id], onDelete: SetNull)
 }

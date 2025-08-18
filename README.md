@@ -16,9 +16,16 @@ Projeto Backend para gerenciamento de estacionamento. Modelo de projeto para aul
 ```js
 DATABASE_URL="mysql://root@localhost:3306/estacionamentoapi?schema=public&timezone=UTC"
 ```
-- 2 Implante o Banco de Dados `npx prisma migrate dev --name init`
+- 2 Altere a linha 2 do `prisma/schema.prisma` para usar o MySQL
+```prisma
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+```
 - 3 Instale as dependências: `npm install`
-- 4 Inicie o servidor: `npm run dev`
+- 4 Implante o Banco de Dados `npx prisma migrate dev --name init`
+- 5 Inicie o servidor: `npm run dev`
 
 ## Rotas
 
