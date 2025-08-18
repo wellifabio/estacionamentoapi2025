@@ -52,7 +52,7 @@ const create = async (req, res) => {
         });
         res.status(201).json(usuario);
     } catch (error) {
-        res.status(500).json({ error: 'Erro ao criar usuario' });
+        res.status(500).json({ error: 'Erro ao criar usuario', details: error.message });
     }
 }
 
@@ -65,7 +65,7 @@ const update = async (req, res) => {
         });
         res.status(202).json(usuario);
     } catch (error) {
-        res.status(500).json({ error: 'Erro ao atualizar usuario' });
+        res.status(500).json({ error: 'Erro ao atualizar usuario', details: error.message });
     }
 }
 
@@ -77,7 +77,7 @@ const del = async (req, res) => {
         });
         res.status(204).send();
     } catch (error) {
-        res.status(500).json({ error: 'Erro ao deletar usuario' });
+        res.status(500).json({ error: 'Erro ao deletar usuario', details: error.message });
     }
 }
 
