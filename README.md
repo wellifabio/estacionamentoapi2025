@@ -30,6 +30,15 @@ datasource db {
 
 ## Rotas
 
+### Usuários
+- `POST /login` - Login de usuário
+- `POST /logado` - Verificar se o usuário está logado
+- `GET /usuarios` - Listar todos os usuários
+- `GET /usuarios/:id` - Buscar usuário por ID
+- `POST /usuarios` - Criar novo usuário
+- `PATCH /usuarios/:id` - Atualizar usuário por ID
+- `DELETE /usuarios/:id` - Deletar usuário por ID
+
 ### Veículos
 - `GET /veiculos` - Listar todos os veículos
 - `GET /veiculos/:placa` - Buscar veículo por placa
