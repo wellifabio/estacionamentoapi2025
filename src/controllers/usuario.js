@@ -27,7 +27,7 @@ const login = async (req, res) => {
                     email: usuario.email,
                 },
                 process.env.JWT_SECRET,
-                { expiresIn: "60min" }
+                { expiresIn: "30min" }
             );
             res.status(200).json({ token: token });
         }
