@@ -15,6 +15,7 @@ Projeto Backend para gerenciamento de estacionamento. Modelo de projeto para aul
 - 1 Clone o repositório, crie o arquivo `.env` com as variáveis de ambiente necessárias
 ```js
 DATABASE_URL="mysql://root@localhost:3306/estacionamentoapi?schema=public&timezone=UTC"
+JWT_SECRET="my_secret"
 ```
 - 2 Altere a linha 2 do `prisma/schema.prisma` para usar o MySQL
 ```prisma
