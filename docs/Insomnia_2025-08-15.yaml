@@ -164,7 +164,7 @@ collection:
         meta:
           id: fld_ee1dd71898fa42e6aeda3717167b3ee7
           created: 1755282728603
-          modified: 1755282728603
+          modified: 1755546822226
           sortKey: -1755282728603
           description: ""
         children:
@@ -173,7 +173,7 @@ collection:
             meta:
               id: req_162388b168064149a7557aad3a3ab34a
               created: 1755282981565
-              modified: 1755523246904
+              modified: 1755546883628
               isPrivate: false
               description: ""
               sortKey: -1755282981565
@@ -194,7 +194,7 @@ collection:
             meta:
               id: req_faf6c9fa24d141c189ce68000e6aa3c7
               created: 1755285301656
-              modified: 1755521809543
+              modified: 1755541078133
               isPrivate: false
               description: ""
               sortKey: -1755282855134
@@ -203,7 +203,7 @@ collection:
               mimeType: application/json
               text: |-
                 {
-                	"placa":"AAA0000",
+                	"placa":"AAA0001",
                 	"proprietario":"Wellington Martins",
                 	"tipo":"CARRO",
                 	"modelo":"Kombi",
@@ -223,12 +223,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: https://estacionamentoapi2025.vercel.app/veiculos/AAA0000
+          - url: https://estacionamentoapi2025.vercel.app/veiculos/AAA0001
             name: DELETE
             meta:
               id: req_37c208117a19459489d6c348ec857043
               created: 1755285455355
-              modified: 1755523274637
+              modified: 1755541130336
               isPrivate: false
               description: ""
               sortKey: -1755282760310.75
@@ -244,12 +244,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: https://estacionamentoapi2025.vercel.app/veiculos/AAA0000
+          - url: https://estacionamentoapi2025.vercel.app/veiculos/AAA0001
             name: UPDATE
             meta:
               id: req_af56b3796eac40129c69527633eae4c3
               created: 1755285735106
-              modified: 1755523255535
+              modified: 1755546965763
               isPrivate: false
               description: ""
               sortKey: -1755282823526.25
@@ -280,11 +280,14 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tZSI6IldlbGxpbmd0b24gTWFydGlucyIsImVtYWlsIjoid2VsbGluZ3RvbkBlbWFpbC5jb20iLCJpYXQiOjE3NTU1NDYzODEsImV4cCI6MTc1NTU0ODE4MX0.F-jkrQ45-SFi2wlXAHFMk_yVUOJGakyfu0-MxlmsMz0
       - name: Estadias
         meta:
           id: fld_74bedeb5166e4c85a97e1aedae7a11cb
           created: 1755285735097
-          modified: 1755285735097
+          modified: 1755546919535
           sortKey: -1755282713388.5
           description: ""
         children:
@@ -324,7 +327,7 @@ collection:
             meta:
               id: req_46ef66c17f8d4abc80d13b4a8ff3044c
               created: 1755285735101
-              modified: 1755533771289
+              modified: 1755546928727
               isPrivate: false
               description: ""
               sortKey: -1755282981565
@@ -345,7 +348,7 @@ collection:
             meta:
               id: req_e3887fdfcef34e0caf311f5aea856b7c
               created: 1755285735104
-              modified: 1755533790945
+              modified: 1755541086899
               isPrivate: false
               description: ""
               sortKey: -1755282855134
@@ -354,7 +357,7 @@ collection:
               mimeType: application/json
               text: |-
                 {
-                	"placa":"AAA0000",
+                	"placa":"AAA0001",
                 	"valorHora":10
                 }
             headers:
@@ -370,17 +373,199 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: https://estacionamentoapi2025.vercel.app/estadias/1
+          - url: https://estacionamentoapi2025.vercel.app/estadias/2
             name: DELETE
             meta:
               id: req_fcc84904248e433f9884813f5df3f3ef
               created: 1755285735108
-              modified: 1755533824549
+              modified: 1755541156333
               isPrivate: false
               description: ""
               sortKey: -1755282760310.75
             method: DELETE
             headers:
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tZSI6IldlbGxpbmd0b24gTWFydGlucyIsImVtYWlsIjoid2VsbGluZ3RvbkBlbWFpbC5jb20iLCJpYXQiOjE3NTU1NDYzODEsImV4cCI6MTc1NTU0ODE4MX0.F-jkrQ45-SFi2wlXAHFMk_yVUOJGakyfu0-MxlmsMz0
+      - name: Usuarios
+        meta:
+          id: fld_9ead666c87364e90aca8ad857e5b1ff0
+          created: 1755543527635
+          modified: 1755545071225
+          sortKey: -1755282728653
+          description: ""
+        children:
+          - url: https://estacionamentoapi2025.vercel.app/usuarios
+            name: READ
+            meta:
+              id: req_d382435aa8f74f838f67f10f12941f7d
+              created: 1755543527640
+              modified: 1755546401545
+              isPrivate: false
+              description: ""
+              sortKey: -1755282981565
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.4.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tZSI6IldlbGxpbmd0b24gTWFydGlucyIsImVtYWlsIjoid2VsbGluZ3RvbkBlbWFpbC5jb20iLCJpYXQiOjE3NTU1NDYzODEsImV4cCI6MTc1NTU0ODE4MX0.F-jkrQ45-SFi2wlXAHFMk_yVUOJGakyfu0-MxlmsMz0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://estacionamentoapi2025.vercel.app/usuarios
+            name: CREATE
+            meta:
+              id: req_4566374e9ec34589bfaf833266c1960d
+              created: 1755543527643
+              modified: 1755545134560
+              isPrivate: false
+              description: ""
+              sortKey: -1755282855134
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome":"Wellington Martins",
+                	"email":"wellington@email.com",
+                	"senha":"senha123"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://estacionamentoapi2025.vercel.app/veiculos/AAA0001
+            name: DELETE
+            meta:
+              id: req_548800b0d20e4c1c8a4203679ee494ee
+              created: 1755543527647
+              modified: 1755543527647
+              isPrivate: false
+              description: ""
+              sortKey: -1755282760310.75
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://estacionamentoapi2025.vercel.app/veiculos/AAA0000
+            name: UPDATE
+            meta:
+              id: req_e52967a8efb34df3bc357f5e53bfad2a
+              created: 1755543527650
+              modified: 1755543527650
+              isPrivate: false
+              description: ""
+              sortKey: -1755282823526.25
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"placa":"AAA0000",
+                	"proprietario":"Wellington Martins",
+                	"tipo":"CARRO",
+                	"modelo":"Kombi",
+                	"marca":"VW",
+                	"cor":"Branca",
+                	"ano":2005,
+                	"telefone":"(19)99999-9999"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://estacionamentoapi2025.vercel.app/login
+            name: LOGIN
+            meta:
+              id: req_949f82590c5347d7a0ca9c7123b789ed
+              created: 1755545577540
+              modified: 1755545587307
+              isPrivate: false
+              description: ""
+              sortKey: -1755282839330.125
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"email":"wellington@email.com",
+                	"senha":"senha123"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://estacionamentoapi2025.vercel.app/logado
+            name: LOGADO
+            meta:
+              id: req_2c8e7584811f45dd9fa00e14fb5f5a95
+              created: 1755546443275
+              modified: 1755546461239
+              isPrivate: false
+              description: ""
+              sortKey: -1755282831428.1875
+            method: POST
+            body:
+              mimeType: application/json
+              text: >-
+                {
+                	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tZSI6IldlbGxpbmd0b24gTWFydGlucyIsImVtYWlsIjoid2VsbGluZ3RvbkBlbWFpbC5jb20iLCJpYXQiOjE3NTU1NDYzODEsImV4cCI6MTc1NTU0ODE4MX0.F-jkrQ45-SFi2wlXAHFMk_yVUOJGakyfu0-MxlmsMz0"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
               - name: User-Agent
                 value: insomnia/11.4.0
             settings:
