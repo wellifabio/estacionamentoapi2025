@@ -52,3 +52,5 @@ datasource db {
 - `POST /estadias` - Criar nova estadia
 - `PATCH /estadias/:id` - Atualizar estadia por ID
 - `DELETE /estadias/:id` - Deletar estadia por ID
+
+![Testes](./docs/insomnia.png)
