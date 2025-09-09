@@ -22,7 +22,7 @@ const readToday = async (req, res) => {
     try {
         const estadias = await prisma.estadia.findMany({
             where: {
-                createdAt: {
+                entrada: {
                     gte: new Date(new Date().setHours(0, 0, 0, 0)),
                     lt: new Date(new Date().setHours(23, 59, 59, 999))
                 }
