@@ -18,6 +18,22 @@ const read = async (req, res) => {
     }
 }
 
+const readToday = async (req, res) => {
+    try {
+        const estadias = await prisma.estadia.findMany({
+            where: {
+                createdAt: {
+                    gte: new Date(new Date().setHours(0, 0, 0, 0)),
+                    lt: new Date(new Date().setHours(23, 59, 59, 999))
+                }
+            }
+        });
+        res.json(estadias).end();
+    } catch (error) {
+        res.status(500).json({ error: 'Erro ao buscar estadias' });
+    }
+}
+
 const create = async (req, res) => {
     try {
         const estadia = await prisma.estadia.create({
@@ -62,6 +78,7 @@ const del = async (req, res) => {
 
 module.exports = {
     read,
+    readToday,
     create,
     update,
     del

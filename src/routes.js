@@ -23,6 +23,7 @@ routes.get('/', (req, res) => {
             { metodo: 'POST', caminho: '/veiculos' },
             { metodo: 'PATCH', caminho: '/veiculos/:placa' },
             { metodo: 'DELETE', caminho: '/veiculos/:placa' },
+            { metodo: 'GET', caminho: '/hoje' },
             { metodo: 'GET', caminho: '/estadias' },
             { metodo: 'GET', caminho: '/estadias/:placa' },
             { metodo: 'POST', caminho: '/estadias' },
@@ -47,6 +48,7 @@ routes.post('/veiculos', Middleware.validate, Veiculo.create);
 routes.patch('/veiculos/:placa', Middleware.validate, Veiculo.update);
 routes.delete('/veiculos/:placa', Middleware.validate, Veiculo.del);
 
+routes.get('/hoje', Estadia.readToday);
 routes.get('/estadias', Middleware.validate, Estadia.read);
 routes.get('/estadias/:placa', Middleware.validate, Estadia.read);
 routes.post('/estadias', Middleware.validate, Estadia.create);
