@@ -5,7 +5,11 @@ const read = async (req, res) => {
     try {
         if (req.params.placa) {
             const estadias = await prisma.estadia.findMany({
-                where: { placa: req.params.placa }
+                where: { placa: req.params.placa },
+                include: {
+                    automovel: true,
+                    usuario: true
+                }
             });
             res.json(estadias).end();
         }
