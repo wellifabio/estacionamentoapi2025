@@ -22,7 +22,7 @@ const readToday = async (req, res) => {
     try {
         const estadias = await prisma.estadia.findMany({
             where: {
-                saida: { is: null } 
+                saida: null
             },
             include: {
                 automovel: true
